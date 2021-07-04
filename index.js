@@ -19,9 +19,11 @@ app.use(cors());
 
 //import routes
 const authRoutes = require("./routes/auth.js");
+const postRoutes = require("./routes/post.js");
 
 //route middlewares
 app.use("/api/user", authRoutes);
+app.use("/posts", postRoutes);
 
 app.listen(PORT, () => {
   console.log("http://localhost:4000");
